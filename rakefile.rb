@@ -9,7 +9,8 @@ APP_RESOURCE_DIR = "#{OUTPUT_DIR}/#{APP_NAME}/Contents/Resources"
 
 task :clean do
 	puts "clean output folder: #{OUTPUT_DIR}"
-	FileUtils.rm_rf("#{OUTPUT_DIR}/*")
+	FileUtils.rm_rf("#{OUTPUT_DIR}")
+	FileUtils.mkdir("#{OUTPUT_DIR}")
 end
 
 task :compile do
